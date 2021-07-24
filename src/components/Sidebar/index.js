@@ -9,6 +9,7 @@ import {
   SidebarBtnWrap,
   SidebarRoute,
 } from "./SidebarElements";
+import { animateScroll as scroll } from "react-scroll";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -18,14 +19,38 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink
+            onClick={toggle}
+            to="about"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
             About
           </SidebarLink>
-          <SidebarLink to="about" onClick={toggle}>
-            Skills
+          <SidebarLink
+            onClick={toggle}
+            to="projects"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Projects
           </SidebarLink>
-          <SidebarLink to="about" onClick={toggle}>
-            Work
+          <SidebarLink
+            onClick={toggle}
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Contact
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrap>
