@@ -22,7 +22,7 @@ import {
 
 const index = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <AboutH1>about me</AboutH1>
       <AboutContent>
         {/* 1st Section of About */}
@@ -103,7 +103,7 @@ const index = () => {
             <Spotify>
               <iframe
                 src="https://open.spotify.com/embed/track/1wo3UYTeizJHkwYIuLuBPF"
-                width="400px"
+                width="100%"
                 height="80"
                 frameBorder="0"
                 allowtransparency="true"
@@ -111,7 +111,7 @@ const index = () => {
               ></iframe>
             </Spotify>
             <AboutP>
-              <b>Fun fact:</b> I want to become a turtle not unicorn.
+              <b>Fun fact:</b> I want to become a tortoise not unicorn.
             </AboutP>
           </AboutText>
 

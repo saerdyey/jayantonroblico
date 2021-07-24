@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../ButtonElements";
+import Resume from "../../static/JayResume.pdf";
 import {
   HeroContainer,
   HeroBg,
@@ -36,11 +37,12 @@ const Hero = () => {
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="download-resume"
+            href={Resume}
+            target="_blank"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
           >
-            Download CV {hover ? <Download /> : <File />}
+            See Resume {hover ? <Download /> : <File />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

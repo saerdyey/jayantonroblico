@@ -28,7 +28,7 @@ export const AboutWrapper = styled.div`
   padding-bottom: 30px;
   border-bottom: 2px solid #051f20;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 720px) {
     flex-direction: column;
     padding-top: 20px;
 
@@ -117,4 +117,8 @@ export const AboutImg = styled.img`
 export const Spotify = styled.div`
   width: 90%;
   align-self: center;
+  padding-right: 100px;
+  @media only screen and (max-width: 720px) {
+    padding: 0;
+  }
 `;
