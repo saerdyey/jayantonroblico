@@ -4,6 +4,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
+  NavImg,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -12,6 +13,7 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
+import JarLogo from "../../images/jar_logo.png";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -36,7 +38,9 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo onClick={toggleHome}>jar</NavLogo>
+          <NavLogo onClick={toggleHome}>
+            <NavImg src={JarLogo}></NavImg>jar
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
