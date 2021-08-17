@@ -52,7 +52,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Techs
           </SidebarLink>
-          <SidebarLink
+          {/* <SidebarLink
             onClick={toggle}
             to="contact"
             smooth={true}
@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             offset={-80}
           >
             Contact
-          </SidebarLink>
+          </SidebarLink> */}
         </SidebarMenu>
         <SidebarBtnWrap>
           <SidebarRoute to="/ping-me">Ping Me</SidebarRoute>
