@@ -14,6 +14,7 @@ import {
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 import JarLogo from "../../images/jar_logo.png";
+import PingCard from "../PingCard";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -32,6 +33,12 @@ const Navbar = ({ toggle }) => {
 
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePing = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -95,7 +102,14 @@ const Navbar = ({ toggle }) => {
             </NavItem> */}
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="ping-me">Ping Me</NavBtnLink>
+            <NavBtnLink
+              onClick={() => {
+                setIsOpen(true);
+              }}
+            >
+              Ping Me
+            </NavBtnLink>
+            <PingCard isOpen={isOpen} toggle={togglePing} />
           </NavBtn>
         </NavbarContainer>
       </Nav>

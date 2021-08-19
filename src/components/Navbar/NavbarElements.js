@@ -94,13 +94,15 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
+  position: relative;
+  /* z-index: 999; */
 
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-export const NavBtnLink = styled(LinkS)`
+export const NavBtnLink = styled.a`
   border-radius: 2px;
   background: #01bf71;
   white-space: nowrap;

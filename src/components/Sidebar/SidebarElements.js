@@ -13,9 +13,11 @@ export const SidebarContainer = styled.aside`
   align-items: center;
   top: 0;
   left: 0;
-  transition: 0.3s ease-in-out;
+
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  visibility: ${({ cardOpen }) => (cardOpen ? "hidden" : "visible")};
+  transition: 0.3s ease-in-out;
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -68,9 +70,10 @@ export const SidebarLink = styled(LinkS)`
 export const SidebarBtnWrap = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
-export const SidebarRoute = styled(LinkR)`
+export const SidebarRoute = styled.a`
   border-radius: 2px;
   background: #01bf71;
   white-space: none;

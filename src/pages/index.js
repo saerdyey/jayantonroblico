@@ -4,9 +4,10 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Works from "../components/Works";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Techs from "../components/Techs";
+import PingCardMobile from "../components/PingCardMobile";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);

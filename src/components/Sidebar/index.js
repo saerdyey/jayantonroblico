@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SidebarContainer,
   Icon,
@@ -9,11 +9,18 @@ import {
   SidebarBtnWrap,
   SidebarRoute,
 } from "./SidebarElements";
+import PingCardMobile from "../PingCardMobile";
 import { animateScroll as scroll } from "react-scroll";
 
 const Sidebar = ({ isOpen, toggle }) => {
+  const [cardOpen, setCardOpen] = useState(false);
+
+  const toggleCard = () => {
+    setCardOpen(!cardOpen);
+  };
+
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} cardOpen={cardOpen}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -65,7 +72,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink> */}
         </SidebarMenu>
         <SidebarBtnWrap>
-          <SidebarRoute to="/ping-me">Ping Me</SidebarRoute>
+          <PingCardMobile isOpen={cardOpen} toggle={toggleCard} />
+          <SidebarRoute
+            onClick={() => {
+              toggleCard();
+            }}
+          >
+            Ping Me
+          </SidebarRoute>
         </SidebarBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
