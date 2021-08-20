@@ -13,7 +13,7 @@ import {
 const PingCard = ({ isOpen, toggle }) => {
   const [pingData, setPingData] = useState({
     from_name: "",
-    from_message: "",
+    message: "",
     from_email: "",
   });
 
