@@ -7,20 +7,20 @@ import {
   PingH3,
   PingContent,
   FaTime,
-  Square,
 } from "./PingCardMobileElements";
+
+emailjs.init(process.env.REACT_APP_USER_ID);
 
 const PingCardMobile = ({ isOpen, toggle }) => {
   const [pingData, setPingData] = useState({
     from_name: "",
     message: "",
-    from_email: "",
+    email: "",
   });
 
   const [pingLoading, setPingLoading] = useState(false);
   const [pingRes, setPingRes] = useState("");
 
-  const userId = process.env.REACT_APP_USER_ID;
   const serviceId = process.env.REACT_APP_SERVICE_ID;
   const templateID = process.env.REACT_APP_TEMPLATE_ID;
 
@@ -39,11 +39,12 @@ const PingCardMobile = ({ isOpen, toggle }) => {
   };
 
   const submitHandler = (e) => {
+    console.log(pingData);
     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
     if (
       pingData.from_name === "" ||
-      pingData.from_email ||
-      pingData.from_message
+      pingData.email === "" ||
+      pingData.message === ""
     ) {
       setPingRes("Sending failed, all fields are required 👾");
       clearMessage();
@@ -56,7 +57,7 @@ const PingCardMobile = ({ isOpen, toggle }) => {
     }
     setPingLoading(true);
     emailjs
-      .send(serviceId, templateID, pingData, userId)
+      .send(serviceId, templateID, pingData)
       .then((response) => {
         if (response.status === 200) {
           setPingRes("Message Sent 👌");
@@ -102,7 +103,7 @@ const PingCardMobile = ({ isOpen, toggle }) => {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="from_message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               onChange={inputHandler}
               value={pingData.message}
