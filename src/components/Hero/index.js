@@ -32,8 +32,8 @@ const Hero = () => {
         {/* <HeroH3>computer engineering student</HeroH3> */}
         <HeroP>I love software development :)</HeroP>
         <HeroP>
-          currently seeking for an internship, open for freelance projects, and
-          in training to be a full stack developer.
+          currently seeking for a developer position, open for freelance
+          projects, and in training to be a full stack developer.
         </HeroP>
         <HeroBtnWrapper>
           <Button

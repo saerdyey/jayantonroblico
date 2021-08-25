@@ -17,8 +17,13 @@ import {
   HexWrapperInner2,
   AboutImg,
   Spotify,
+  WorkExperiencesContainer,
+  WorkExperiencesFlexWrapper,
+  WorkExperience,
+  EducationsContainer,
+  EducationsFlexWrapper,
+  Education,
 } from "./AboutElements";
-// import profile2 from "../../images/profile2.png";
 
 const index = () => {
   return (
@@ -73,17 +78,50 @@ const index = () => {
           </AboutImgWrapper>
 
           <AboutText>
-            <AboutH3>EDUCATION</AboutH3>
-            <AboutH4>
-              Polytechnic University of the Philippines - Manila
-            </AboutH4>
-            <AboutP>Senior High School (2016-2018)</AboutP>
-            <AboutH4>Judge Feliciano Belmonte Sr. High School</AboutH4>
-            <AboutP>High School (2012-2016)</AboutP>
-            <AboutH3>WORK EXPERIENCE</AboutH3>
-            <AboutH4>Web Developer</AboutH4>
-            <AboutP>Freelance | PUP-Manila, Philippines</AboutP>
-            <AboutP>January 2021 - March 2021</AboutP>
+            {/* EDUCATIONS */}
+            <EducationsContainer>
+              <AboutH3>EDUCATION</AboutH3>
+              <EducationsFlexWrapper>
+                <Education>
+                  <AboutH4>
+                    Polytechnic University of the Philippines - Manila
+                  </AboutH4>
+                  <AboutP>
+                    Bachelor of Science in Computer Engineering (2018-current)
+                  </AboutP>
+                </Education>
+                <Education>
+                  <AboutH4>
+                    Polytechnic University of the Philippines - Manila
+                  </AboutH4>
+                  <AboutP>
+                    Senior High School | Science, Technology, Engineering, and
+                    Mathematics (2016-2018)
+                  </AboutP>
+                </Education>
+                <Education>
+                  <AboutH4>Judge Feliciano Belmonte Sr. High School</AboutH4>
+                  <AboutP>High School (2012-2016)</AboutP>
+                </Education>
+              </EducationsFlexWrapper>
+            </EducationsContainer>
+
+            {/* WORK EXPERIENCES */}
+            <WorkExperiencesContainer>
+              <AboutH3>WORK EXPERIENCE</AboutH3>
+              <WorkExperiencesFlexWrapper>
+                <WorkExperience>
+                  <AboutH4>Web Developer</AboutH4>
+                  <AboutP>Freelance | PUP-Manila, Philippines</AboutP>
+                  <AboutP>January 2021 - March 2021</AboutP>
+                </WorkExperience>
+                <WorkExperience>
+                  <AboutH4>Development | QA Intern</AboutH4>
+                  <AboutP>Wizy Software Labs, Inc | Manila, Philippines</AboutP>
+                  <AboutP>August 2021 - September 2021</AboutP>
+                </WorkExperience>
+              </WorkExperiencesFlexWrapper>
+            </WorkExperiencesContainer>
           </AboutText>
         </AboutWrapper>
 

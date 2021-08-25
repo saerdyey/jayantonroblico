@@ -12,6 +12,7 @@ import project2 from "../../images/project2.PNG";
 import project3 from "../../images/project3.PNG";
 import project4 from "../../images/project4.PNG";
 import project5 from "../../images/project5.PNG";
+import project6 from "../../images/project6.png";
 
 const Works = () => {
   return (
@@ -32,13 +33,19 @@ const Works = () => {
               label="covid19-tracker"
               path="https://saerdyey.github.io/covid19ph-tracker/"
             />
+            <StyledCard
+              src={project6}
+              text="Emergency mobile application"
+              label="JuanTapp"
+              path="#"
+            />
           </Cards>
           <Cards>
             <StyledCard
               src={project4}
               text="Showcase portfolio of my hairstylist brother"
               label="hairbycarloroblico"
-              path="hairbycarloroblico.netlify.app"
+              path="https://hairbycarloroblico.netlify.app"
             />
             <StyledCard
               src={project5}
@@ -50,7 +57,7 @@ const Works = () => {
               src={project3}
               text="Website for SSS North Village"
               label="TripleS Home Village"
-              path="/tripleshomeowners.netlify.app"
+              path="https://tripleshomeowners.netlify.app"
             />
           </Cards>
         </CardsWrapper>

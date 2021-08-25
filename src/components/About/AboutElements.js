@@ -46,23 +46,55 @@ export const AboutText = styled.div`
   justify-content: center;
 `;
 
+export const EducationsContainer = styled.div`
+  width: 100%;
+`;
+
+export const EducationsFlexWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+`;
+
+export const Education = styled.div`
+  flex: 1;
+  margin-bottom: 20px;
+`;
+
+export const WorkExperiencesContainer = styled.div``;
+
+export const WorkExperiencesFlexWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  @media only screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+`;
+
+export const WorkExperience = styled.div`
+  flex: 1;
+  margin-bottom: 20px;
+`;
+
 export const AboutP = styled.p`
   width: 90%;
   font-size: 20px;
-  margin-top: 20px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 `;
 
 export const AboutH3 = styled.h3`
   font-size: 22px;
   color: #27a361;
   width: 90%;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const AboutH4 = styled.h4`
   width: 90%;
   font-size: 20px;
-  margin-top: 20px;
+  margin-bottom: 5px;
 `;
 
 export const AboutImgWrapper = styled.div`
