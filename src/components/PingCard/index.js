@@ -62,16 +62,17 @@ const PingCard = ({ isOpen, toggle }) => {
       .then((response) => {
         if (response.status === 200) {
           setPingRes("Message Sent 👌");
-          console.log(response);
-          setPingLoading(false);
         } else {
           setPingRes("Message Sending Failed 👽");
         }
+        setPingLoading(false);
       })
       .catch((e) => {
         console.log(e);
         setPingRes("Message Sending Failed 👽");
+        setPingLoading(false);
       });
+
     clearMessage();
   };
   return (
