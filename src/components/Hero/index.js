@@ -7,7 +7,6 @@ import {
   VideoBg,
   HeroContent,
   HeroH1,
-  HeroH3,
   HeroP,
   HeroBtnWrapper,
   File,

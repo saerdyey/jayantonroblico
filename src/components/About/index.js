@@ -38,7 +38,7 @@ const index = () => {
               Polytechnic University of the Philippines.
             </AboutP>
             <AboutP>
-              I love building things specially web apps and mobile apps.
+              I love building things specially web and mobile applications.
             </AboutP>
             <AboutP>
               Personally, I prefer working in the backend because I'm not good
@@ -146,6 +146,7 @@ const index = () => {
                 frameBorder="0"
                 allowtransparency="true"
                 allow="encrypted-media"
+                title="spotify"
               ></iframe>
             </Spotify>
             <AboutP>

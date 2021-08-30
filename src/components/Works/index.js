@@ -25,7 +25,7 @@ const Works = () => {
               src={project1}
               text="Fully responsive web portfolio using React JS"
               label="JAR"
-              path="/"
+              path=""
             />
             <StyledCard
               src={project2}
@@ -37,7 +37,7 @@ const Works = () => {
               src={project6}
               text="Emergency mobile application"
               label="JuanTapp"
-              path="#"
+              path="https://github.com/ESS-Group-Emergency-Mobile-Application"
             />
           </Cards>
           <Cards>
