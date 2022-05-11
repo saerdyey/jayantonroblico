@@ -61,6 +61,11 @@ const PingCardMobile = ({ isOpen, toggle }) => {
       .then((response) => {
         if (response.status === 200) {
           setPingRes("Message Sent 👌");
+          setPingData({
+            from_name: "",
+            message: "",
+            email: "",
+          })
         } else {
           setPingRes("Message Sending Failed 👽");
         }

@@ -41,13 +41,12 @@ const index = () => {
               I love building things specially web and mobile applications.
             </AboutP>
             <AboutP>
-              Personally, I prefer working in the backend because I'm not good
-              at designing, but I'm still learning. I'm also interested in
+              Personally, I prefer working on backend because I like to do logical solutions for businesses. I'm also interested in
               DevOps :)
             </AboutP>
             <AboutP>
               My goal is to become successful software developer and my dream is
-              to become a CTO of a company.
+              to become a CTO or a software architect.
             </AboutP>
             <AboutP>
               Why the picture? Nvm him that's Chrollo Lucifer with his cat.
@@ -110,15 +109,27 @@ const index = () => {
             <WorkExperiencesContainer>
               <AboutH3>WORK EXPERIENCE</AboutH3>
               <WorkExperiencesFlexWrapper>
-                <WorkExperience>
-                  <AboutH4>Web Developer</AboutH4>
-                  <AboutP>Freelance | PUP-Manila, Philippines</AboutP>
-                  <AboutP>January 2021 - March 2021</AboutP>
+              <WorkExperience>
+                  <AboutH4>Frontend Software Engineer</AboutH4>
+                  <AboutP>Aiah| Innovantage, Inc. | Makati, Philippines</AboutP>
+                  <AboutP>August 2021 - September 2021</AboutP>
                 </WorkExperience>
+                <WorkExperience>
+                  <AboutH4>Fullstack Web Developer</AboutH4>
+                  <AboutP>Freelance | Anihan Digital | Manila, Philippines</AboutP>
+                  <AboutP>December 2021</AboutP>
+                </WorkExperience>
+              </WorkExperiencesFlexWrapper>
+              <WorkExperiencesFlexWrapper>
                 <WorkExperience>
                   <AboutH4>Development | QA Intern</AboutH4>
                   <AboutP>Wizy Software Labs, Inc | Manila, Philippines</AboutP>
                   <AboutP>August 2021 - September 2021</AboutP>
+                </WorkExperience>
+                <WorkExperience>
+                  <AboutH4>Fullstack Web Developer</AboutH4>
+                  <AboutP>Freelance | PUP-Manila, Philippines</AboutP>
+                  <AboutP>January 2021 - March 2021</AboutP>
                 </WorkExperience>
               </WorkExperiencesFlexWrapper>
             </WorkExperiencesContainer>
