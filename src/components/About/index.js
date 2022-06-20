@@ -112,7 +112,7 @@ const index = () => {
               <WorkExperience>
                   <AboutH4>Frontend Software Engineer</AboutH4>
                   <AboutP>Aiah| Innovantage, Inc. | Makati, Philippines</AboutP>
-                  <AboutP>August 2021 - September 2021</AboutP>
+                  <AboutP>November 2021 - May 2022</AboutP>
                 </WorkExperience>
                 <WorkExperience>
                   <AboutH4>Fullstack Web Developer</AboutH4>

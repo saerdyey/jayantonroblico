@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../ButtonElements";
 import Resume from "../../static/jay-anton-roblico-resume.pdf";
-import Resume2 from "../../static/jay-anton-roblico-resume.pdf";
 import {
   HeroContainer,
   HeroBg,
@@ -32,12 +31,11 @@ const Hero = () => {
         {/* <HeroH3>computer engineering student</HeroH3> */}
         <HeroP>I love software development :)</HeroP>
         <HeroP>
-          currently seeking for a developer position, open for freelance
-          projects, and in training to be a full stack developer.
+          currently seeking for a developer position, open for freelance, and opensource projects.
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            href={Resume2}
+            href={Resume}
             target="_blank"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
