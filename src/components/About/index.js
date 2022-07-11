@@ -122,7 +122,7 @@ const index = () => {
               </WorkExperiencesFlexWrapper>
               <WorkExperiencesFlexWrapper>
                 <WorkExperience>
-                  <AboutH4>Development | QA Intern</AboutH4>
+                  <AboutH4>Software Quality Assurance Intern</AboutH4>
                   <AboutP>Wizy Software Labs, Inc | Manila, Philippines</AboutP>
                   <AboutP>August 2021 - September 2021</AboutP>
                 </WorkExperience>
