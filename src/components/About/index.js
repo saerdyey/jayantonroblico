@@ -110,7 +110,7 @@ const index = () => {
               <AboutH3>WORK EXPERIENCE</AboutH3>
               <WorkExperiencesFlexWrapper>
               <WorkExperience>
-                  <AboutH4>Frontend Software Engineer</AboutH4>
+                  <AboutH4>Frontend Software Engineer Intern</AboutH4>
                   <AboutP>Aiah| Innovantage, Inc. | Makati, Philippines</AboutP>
                   <AboutP>November 2021 - May 2022</AboutP>
                 </WorkExperience>
