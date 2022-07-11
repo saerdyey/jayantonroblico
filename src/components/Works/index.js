@@ -37,7 +37,7 @@ const Works = () => {
               src={project6}
               text="Emergency mobile application"
               label="JuanTapp"
-              path="https://github.com/ESS-Group-Emergency-Mobile-Application"
+              path="https://youtu.be/ZitxCpD_skE"
             />
           </Cards>
           <Cards>
