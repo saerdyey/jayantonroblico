@@ -86,7 +86,7 @@ const index = () => {
                     Polytechnic University of the Philippines - Manila
                   </AboutH4>
                   <AboutP>
-                    Bachelor of Science in Computer Engineering (2018-current)
+                    Bachelor of Science in Computer Engineering (2018-2022)
                   </AboutP>
                 </Education>
                 <Education>
@@ -123,7 +123,7 @@ const index = () => {
               <WorkExperiencesFlexWrapper>
                 <WorkExperience>
                   <AboutH4>Software Quality Assurance Intern</AboutH4>
-                  <AboutP>Wizy Software Labs, Inc | Manila, Philippines</AboutP>
+                  <AboutP>Wizy Software Labs, Inc | Quezon City, Philippines</AboutP>
                   <AboutP>August 2021 - September 2021</AboutP>
                 </WorkExperience>
                 <WorkExperience>
