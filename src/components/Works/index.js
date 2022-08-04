@@ -13,6 +13,8 @@ import project3 from "../../images/project3.PNG";
 import project4 from "../../images/project4.PNG";
 import project5 from "../../images/project5.PNG";
 import project6 from "../../images/project6.png";
+import project7 from "../../images/project7.png";
+
 
 const Works = () => {
   return (
@@ -42,10 +44,10 @@ const Works = () => {
           </Cards>
           <Cards>
             <StyledCard
-              src={project4}
-              text="Showcase portfolio of my hairstylist brother"
-              label="hairbycarloroblico"
-              path="https://hairbycarloroblico.netlify.app"
+              src={project7}
+              text="Movie Reviews created with ReactJS"
+              label="React Movies"
+              path="https://react-movie-reviews.netlify.app"
             />
             <StyledCard
               src={project5}
