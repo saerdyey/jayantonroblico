@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 
@@ -8,87 +7,106 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 22px 22px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  top: 0;
   left: 0;
+  overflow: hidden;
 
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  visibility: ${({ cardOpen }) => (cardOpen ? "hidden" : "visible")};
   transition: 0.3s ease-in-out;
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: var(--on-accent);
 `;
 
 export const Icon = styled.div`
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: transparent;
-  font-size: 2rem;
+  top: 14px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange);
+  border: var(--border);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-size: 1.3rem;
   cursor: pointer;
-  outline: none;
 `;
 
 export const SidebarWrapper = styled.div`
-  color: #fff;
+  color: var(--ink);
 `;
 
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(4, 76px);
   text-align: center;
-
-  @media screen and (max-width: 480px) {
-    grid-grid-template-rows: repeat(6, 60px);
-  }
+  margin-bottom: 32px;
 `;
 
 export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: lowercase;
   text-decoration: none;
   list-style: none;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  color: #fff;
+  transition: 0.15s ease-in-out;
+  color: var(--ink);
   cursor: pointer;
 
+  &::before {
+    content: ">";
+    font-family: var(--font-pixel);
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: var(--orange);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
   &:hover {
-    color: #01bf71;
-    transition: 0.2s ease-in-out;
+    color: var(--teal);
+  }
+  &:hover::before {
+    opacity: 1;
   }
 `;
 
 export const SidebarBtnWrap = styled.div`
   display: flex;
   justify-content: center;
-  position: relative;
 `;
 
-export const SidebarRoute = styled.a`
-  border-radius: 2px;
-  background: #01bf71;
-  white-space: none;
+export const SidebarRoute = styled.button`
+  background: var(--orange);
+  color: var(--on-accent);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
   padding: 16px 64px;
-  color: #010606;
+  font-family: var(--font-pixel);
   font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2 ease-in-out;
   text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
 
   &:hover {
-    transition: all 0.2 ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: var(--mustard);
+  }
+  &:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--ink);
   }
 `;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaMoon, FaSun } from "react-icons/fa";
 import {
   Nav,
   NavbarContainer,
@@ -11,13 +11,17 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  NavActions,
+  ThemeToggle,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 import JarLogo from "../../images/jar_logo.png";
-import PingCard from "../PingCard";
+import { CONTACT_MAILTO } from "../../constants";
+import useTheme from "../../hooks/useTheme";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [theme, toggleTheme] = useTheme();
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -29,28 +33,20 @@ const Navbar = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
+    return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
   const toggleHome = () => {
     scroll.scrollToTop();
   };
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const togglePing = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo onClick={toggleHome}>
+          <NavLogo to="/" onClick={toggleHome}>
             <NavImg src={JarLogo}></NavImg>jar
           </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
           <NavMenu>
             <NavItem>
               <NavLinks
@@ -88,6 +84,18 @@ const Navbar = ({ toggle }) => {
                 Techs
               </NavLinks>
             </NavItem>
+            <NavItem>
+              <NavLinks
+                to="blog"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Blog
+              </NavLinks>
+            </NavItem>
             {/* <NavItem>
               <NavLinks
                 to="contact"
@@ -101,16 +109,26 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem> */}
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink
-              onClick={() => {
-                setIsOpen(true);
-              }}
+          <NavActions>
+            <ThemeToggle
+              type="button"
+              onClick={toggleTheme}
+              aria-label={
+                theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+              }
+              title={theme === "dark" ? "Light mode" : "Dark mode"}
             >
-              Ping Me
-            </NavBtnLink>
-            <PingCard isOpen={isOpen} toggle={togglePing} />
-          </NavBtn>
+              {theme === "dark" ? <FaSun /> : <FaMoon />}
+            </ThemeToggle>
+            <NavBtn>
+              <NavBtnLink as="a" href={CONTACT_MAILTO}>
+                Say Hello ✉
+              </NavBtnLink>
+            </NavBtn>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+          </NavActions>
         </NavbarContainer>
       </Nav>
     </>

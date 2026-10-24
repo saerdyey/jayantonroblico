@@ -4,7 +4,22 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/jar_favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#f3ead7" />
+    <script>
+      // apply the saved (or system) theme before first paint to avoid a flash
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <meta
       name="description"
       content="Hi! I'm Jay Anton Roblico, this is my web portfolio created using ReactJS"
@@ -18,7 +33,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Play&family=Tourney&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;700&family=VT323&display=swap"
       rel="stylesheet"
     />
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->

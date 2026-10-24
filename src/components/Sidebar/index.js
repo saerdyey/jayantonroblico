@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   SidebarContainer,
   Icon,
@@ -9,18 +9,11 @@ import {
   SidebarBtnWrap,
   SidebarRoute,
 } from "./SidebarElements";
-import PingCardMobile from "../PingCardMobile";
-import { animateScroll as scroll } from "react-scroll";
+import { CONTACT_MAILTO } from "../../constants";
 
 const Sidebar = ({ isOpen, toggle }) => {
-  const [cardOpen, setCardOpen] = useState(false);
-
-  const toggleCard = () => {
-    setCardOpen(!cardOpen);
-  };
-
   return (
-    <SidebarContainer isOpen={isOpen} cardOpen={cardOpen}>
+    <SidebarContainer isOpen={isOpen}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -59,6 +52,17 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Techs
           </SidebarLink>
+          <SidebarLink
+            onClick={toggle}
+            to="blog"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Blog
+          </SidebarLink>
           {/* <SidebarLink
             onClick={toggle}
             to="contact"
@@ -72,13 +76,8 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink> */}
         </SidebarMenu>
         <SidebarBtnWrap>
-          <PingCardMobile isOpen={cardOpen} toggle={toggleCard} />
-          <SidebarRoute
-            onClick={() => {
-              toggleCard();
-            }}
-          >
-            Ping Me
+          <SidebarRoute as="a" href={CONTACT_MAILTO} onClick={toggle}>
+            Say Hello ✉
           </SidebarRoute>
         </SidebarBtnWrap>
       </SidebarWrapper>

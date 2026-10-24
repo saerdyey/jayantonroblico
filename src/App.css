@@ -1,6 +1,116 @@
+:root {
+  /* surfaces & lines (flip with the theme) */
+  --paper: #f3ead7; /* page background */
+  --paper-2: #e8dbbd; /* recessed panels */
+  --cream: #fffaf0; /* window surfaces */
+  --ink: #161412; /* text, borders, hard shadows */
+  --ink-soft: #4a443b;
+  --dot: rgba(22, 20, 18, 0.12);
+  --input-bg: #ffffff;
+
+  /* dark bands (ticker, projects, footer bar) */
+  --band-bg: #161412;
+  --band-fg: #f3ead7;
+
+  /* small inverted labels (date chips, tags) */
+  --chip-bg: #161412;
+  --chip-fg: #f3ead7;
+
+  /* accents */
+  --orange: #ff5b2e;
+  --teal: #0f8b8d;
+  --mustard: #f4b42a;
+  --mint: #9fd8cf;
+  --on-accent: #161412; /* text on orange / mustard / mint */
+  --on-teal: #fffaf0;
+
+  --border: 3px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-pixel: "Silkscreen", monospace;
+  --font-term: "VT323", monospace;
+}
+
+/* night-terminal theme: charcoal surfaces, cream lines */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171512;
+  --paper-2: #0f0e0c;
+  --cream: #232019;
+  --ink: #f3ead7;
+  --ink-soft: #b8af9f;
+  --dot: rgba(243, 234, 215, 0.08);
+  --input-bg: #171512;
+
+  --band-bg: #0b0a09;
+  --band-fg: #f3ead7;
+
+  --chip-bg: #f3ead7;
+  --chip-fg: #161412;
+
+  --teal: #3cc6c4;
+  --on-teal: #161412;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Play", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  /* subtle dot-grid paper texture */
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: var(--mustard);
+  color: var(--on-accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px dashed var(--orange);
+  outline-offset: 3px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
